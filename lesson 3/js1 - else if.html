@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+</head>
+
+<body>
+
+    <script>
+        
+        document.write("Hey, let's have a litte math quiz! Type in the correct anwer!<br>");
+
+        var question1 = prompt("What is 2 + 2 ?");
+        var question2 = prompt("What is 2 * 6 ?");
+        var question3 = prompt("What is 9 / 3 ?");
+        var question4 = prompt("What is 10 - 4 ?");
+        var question5 = prompt("What is 45 / 5 * 3 ?");
+
+        question1 = parseInt(question1);
+        question2 = parseInt(question2);
+        question3 = parseInt(question3);
+        question4 = parseInt(question4);
+        question5 = parseInt(question5);
+
+        var score = 0;
+        if (question1 == 4) {
+            score += 1;
+        }
+
+        if (question2 == 12) {
+            score += 1;
+        }
+
+        if (question3 == 3) {
+            score += 1;
+        }
+
+        if (question4 == 6) {
+            score += 1;
+        }
+
+        if (question5 == 27) {
+            score += 1;
+        }
+
+
+        document.write("<br>Your score is " + score + ".<br>");
+
+
+        if (score == 5) {
+            document.write("Excellent, you won gold!");
+        } else if (score == 4) {
+            document.write("Well done, you won silver!");
+        } else if (score == 3) {
+            document.write("Great, you won bronze!");
+        } else {
+            document.write("Well...you could use some math lessons.");
+        }
+
+    </script>
+
+</body>
+
+</html>

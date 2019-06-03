@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+        <script>
+            var numbers = [
+                12,
+                21,
+                3,
+                45,
+                7
+            ];
+            
+            var sum = 0;
+            var factor = 1;
+            
+            for (var i = 0; i < numbers.length; i++) {
+                
+                document.write(numbers[i] + "<br>");
+                
+                sum += numbers[i];
+                factor *= numbers[i];
+            }
+            
+            var avg = sum / numbers.length;
+            
+            document.write("The total is " + sum + "<br>");
+            document.write("The average is " + avg + "<br>");
+
+            // 1. FIND THE HIGHEST NUMBER IN THE ARRAY
+            // 2. FIND THE LOWEST NUMBER IN THE ARRAY
+            
+            
+        </script>
+	</body>
+</html>

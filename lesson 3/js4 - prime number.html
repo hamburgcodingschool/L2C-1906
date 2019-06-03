@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+        <script>
+            
+            var number = 5; // MOCK VALUE, ASK USER FOR NUMBER LATER
+            
+            var zeroCounter = 0;
+            
+            // from 2(inclusive) to number(exclusive)
+            for (var i = 2; i < number; i++) {
+                
+                var remainder = number % i;
+                
+                if (remainder == 0) {
+                    zeroCounter ++;
+                }
+//                document.write(number + " % " + i + " = " + remainder + "<br>");
+                
+            }
+            
+            if (zeroCounter > 0) {
+                document.write("NOT A PRIME!");
+            } else {
+                document.write("DUDE! YOU GOT A PRIME!");
+            }
+            
+            
+        </script>
+	</body>
+</html>
