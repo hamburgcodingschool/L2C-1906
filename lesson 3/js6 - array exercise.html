@@ -16,6 +16,8 @@
             
             var sum = 0;
             var factor = 1;
+            var highest = numbers[0];
+            var lowest = numbers[0];
             
             for (var i = 0; i < numbers.length; i++) {
                 
@@ -23,15 +25,30 @@
                 
                 sum += numbers[i];
                 factor *= numbers[i];
+                
+                if (i == 0) {
+                    continue;
+                }
+                
+                if (numbers[i] > highest) {
+                    highest = numbers[i]
+                }
+                
+                if (numbers[i] < lowest) {
+                    lowest = numbers[i]
+                }
             }
             
             var avg = sum / numbers.length;
             
             document.write("The total is " + sum + "<br>");
+            document.write("The product is " + factor + "<br>");
             document.write("The average is " + avg + "<br>");
-
-            // 1. FIND THE HIGHEST NUMBER IN THE ARRAY
-            // 2. FIND THE LOWEST NUMBER IN THE ARRAY
+            document.write("The highest is " + highest + "<br>");
+            document.write("The lowest is " + lowest + "<br>");
+            
+            
+            
             
             
         </script>

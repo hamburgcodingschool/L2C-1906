@@ -12,14 +12,17 @@
             var zeroCounter = 0;
             
             // from 2(inclusive) to number(exclusive)
-            for (var i = 2; i < number; i++) {
+            for (var i = 2; i <= Math.sqrt(number); i++) {
                 
                 var remainder = number % i;
+               
+//document.write(number + " % " + i + " = " + remainder + "<br>");
                 
                 if (remainder == 0) {
                     zeroCounter ++;
+                    break;
                 }
-//                document.write(number + " % " + i + " = " + remainder + "<br>");
+               
                 
             }
             

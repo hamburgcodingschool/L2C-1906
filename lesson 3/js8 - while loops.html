@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <script>
+
+//        var name = prompt("what is your name?");
+//        
+//        while(name != "Helder") {
+//            alert("Only Helder can get in. Sorry!");
+//            
+//            name = prompt("what is your name?");
+//        }
+//        
+//        document.write("END");
+        
+        
+        var secretPin = 1234;
+        var failCounter = 3;
+        var grantAccess = true;
+        
+        var userPin = prompt("What's the Pin Number?");
+        
+        while (userPin != secretPin) {
+            failCounter--;
+            if (failCounter == 0) {
+                grantAccess = false;
+                break;
+            }
+            
+            userPin = prompt("WONG PIN! you have " + failCounter + " more chances:");
+        }
+        
+        if (grantAccess) {
+            document.write("Welcome!");    
+        } else {
+            document.write("ACCESS DENIED! YOU MISSED TOO MANY TIMES! CALL SUPPORT NOW");    
+        }
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+    </script>
+    
+</body></html>

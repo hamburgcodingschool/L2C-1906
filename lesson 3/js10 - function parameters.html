@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+        <script>
+
+            function greeting(name) {
+                
+                document.write("Hello " + name + "!<br>");
+            
+            }
+            
+            greeting("Julia");
+            
+            greeting("Ingo");
+            
+            
+            
+            // Create a circleArea function that receives the radius as a parameter and prints the area of a Circle!
+            
+            function circleArea(radius) {
+                
+//                var area = Math.PI * radius * radius;
+                var area = Math.PI * Math.pow(radius, 2);
+                
+                document.write(area + "<br>");
+            }
+            
+            function circlePerimeter(radius) {
+                
+                var per = 2 * Math.PI * radius;
+                
+                document.write(per + "<br>");
+            }
+            
+            circleArea(3);
+            circleArea(6);
+            circleArea(7);
+            
+            circlePerimeter(7);
+            
+        </script>
+	</body>
+</html>

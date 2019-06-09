@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        var type = prompt("(S)um or (P)roduct?");
+        var n = prompt("How much?") * 1;
+
+        if (type == "S") {
+            var sum = 0;
+
+            for (var i = 1; i <= n; i++) {
+                sum += i; //sum = sum + i;
+            }
+
+            document.write(sum + "<br>");
+        } else {
+            var prod = 1;
+
+            for (var i = 1; i <= n; i++) {
+                prod *= i; //sum = sum + i;
+            }
+
+            document.write(prod + "<br>");
+        }
+    </script>
+
+</body></html>

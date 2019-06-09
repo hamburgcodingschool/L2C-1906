@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+        <script>  
+            function circleArea(radius) {
+                
+                return Math.PI * radius * radius;
+                
+            }
+            
+            function circlePerimeter(radius) {
+                
+                var per = 2 * Math.PI * radius;
+                
+                return per; // this is the function result
+            }
+            
+            function rectArea(sideA, sideB) {
+                var area = sideA * sideB;
+                return area;
+            }
+            
+            function rectPerimeter(sideA, sideB) {
+//                var per = sideA + sideA + sideB + sideB;
+                var per = 2 * (sideA + sideB);
+                return per;
+            }
+            
+            var x = circlePerimeter(7);
+            document.write(x + "<br>");
+            
+            document.write(rectArea(4, 4) + "<br>");
+            document.write(rectPerimeter(12, 7) + "<br>");
+     
+            
+        </script>
+	</body>
+</html>
