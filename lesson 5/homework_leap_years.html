@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        function isLeapYear(year) {
+            
+            if (year % 400 == 0) {
+                return true;
+            } else if (year % 100 == 0) {
+                return false;
+            } else if (year % 4 == 0) {
+                return true;
+            }
+            
+            return false;
+        }
+
+        var year = 2019;
+        var counter = 0;
+        while (counter < 4) {
+            
+            if (isLeapYear(year)) {
+                counter++;
+                document.write(counter + ": " + year + "<br>");
+            }
+            year ++;
+        }
+    </script>
+</body></html>

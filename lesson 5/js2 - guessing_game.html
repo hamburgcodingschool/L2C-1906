@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        function myRandom(min, max) {
+
+            return Math.floor(Math.random() * (max + 1 - min)) + min;
+
+        }
+
+        var gameNumber = myRandom(1, 100);
+//        alert(gameNumber); // CHEAT WHILE WE ARE DEVELOPING
+
+        var lives = 6;
+        
+        var userNumber = prompt("Give me a number. You have " + lives + " tries") * 1;
+
+        // while the userNumber is different from the secretNumber keep trying
+        while (gameNumber != userNumber) {
+            
+            // exit when lives reach 0
+            lives--;
+            if (lives == 0) {
+                break;
+            }
+            
+            // give user some feedback so he can try again
+            if (gameNumber > userNumber) {
+
+                alert("HAHA! you need to go higher");
+
+            } else {
+
+                alert("HAHA! you need to go lower");
+
+            } 
+            
+            // ask user for a new number
+            userNumber = prompt("Try again. You have " + lives + " tries left") * 1;
+        }
+        
+        // game over, let's check if user won
+        if (gameNumber == userNumber) { 
+            alert("Way to go!!!!!");    
+        } else {
+            alert("Dude you suck!!!!!");    
+        }
+        
+    </script>
+</body></html>

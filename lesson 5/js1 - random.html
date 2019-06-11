@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //        function myRandom(min, max) {
+        //
+        //            var x = Math.random();   
+        //
+        //            x = x * (max + 1 - min);
+        //
+        //            x = Math.floor(x);
+        //
+        //            x  = x + min;
+        //            
+        //            return x;
+        //
+        //        }
+
+        function myRandom(min, max) {
+            
+            return Math.floor(Math.random() * (max + 1 - min)) + min;
+
+        }
+
+        document.write(myRandom(5, 15));
+    </script>
+</body></html>
