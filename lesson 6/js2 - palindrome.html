@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //        var name = "banana"; // prompt("Write something...");
+        //
+        //        //        for (var i = name.length - 1; i >= 0; i--) {
+        //        //            document.write(name[i] + "<br>");
+        //        //        }
+        //
+        //        var palindrome = true;
+        //
+        //        for (var i = 0; i < name.length * 0.5; i++) {
+        //            var mirrorPos = name.length - 1 - i;
+        //
+        //            if (name[i] != name[mirrorPos]) {
+        //                palindrome = false;
+        //                break;
+        //            }
+        //        }
+        //        
+        //        alert(palindrome);
+
+        function isPalindrome(word) {
+
+            for (var i = 0; i < name.length * 0.5; i++) {
+                var mirrorPos = name.length - 1 - i;
+                if (name[i] != name[mirrorPos]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        
+        var name = prompt("hey give me a name...");
+        
+        if (isPalindrome(name)) {
+            document.write("Dude that is an awesome palindrome");
+        } else {
+            document.write("Sorry dude that is not an awesome palindrome, it's not a palindrome at all...");
+        }
+    </script>
+</body></html>

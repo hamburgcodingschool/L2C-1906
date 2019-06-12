@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        var names = [
+            "Peter",
+            "Hank",
+            "Frank",
+            "Jane",
+            "Mandy",
+            "Bob",
+            "Santa Claus",
+            "Josh",
+            "Hercules"
+        ];
+
+        //        var longestName = names[0];
+        //        
+        //        for (var i = 0; i < names.length; i++) {
+        //            document.write(names[i] + ": " + names[i].length + " chars<br>");
+        //            
+        //            if (names[i].length > longestName.length) {
+        //                longestName = names[i];
+        //            }
+        //        }
+        //    
+        //        document.write("<br>The longest name is " + longestName + " and it has " + longestName.length + " chars<br>");
+
+
+        var posOfLongest = 0;
+
+        for (var i = 0; i < names.length; i++) {
+            if (names[i].length > names[posOfLongest].length) {
+                posOfLongest = i;
+            }
+        }
+        
+        var longestName = names[posOfLongest];
+        
+        document.write("<br>The longest name is " + longestName + " and it has " + longestName.length + " chars<br>");
+        
+        
+        
+    </script>
+</body></html>

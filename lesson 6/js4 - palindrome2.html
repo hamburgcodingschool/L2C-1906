@@ -1,0 +1,46 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <script>
+//        var someName = "zzz"; // zzzabooder
+//
+//        someName += "a";
+//        someName += "b";
+//
+//        for (var i = 0; i < 2; i++) {
+//            someName += "o";
+//        }
+//
+//        var color = "red";
+//
+//        for (var i = color.length - 1; i >= 0; i--) {
+//            someName += color[i];
+//        }
+//
+//        alert(someName);
+        
+        
+        var name = prompt("Whats your name?")
+        
+        var reversedName = "";
+        for (var i = name.length - 1; i >= 0; i--) {
+            reversedName += name[i];
+        }
+        
+        alert(reversedName);
+        
+        if (name == reversedName) {
+            document.write("Dude that is an awesome palindrome");
+        } else {
+            document.write("Sorry dude that is not an awesome palindrome, it's not a palindrome at all...");
+        }
+        
+    </script>
+</body></html>
