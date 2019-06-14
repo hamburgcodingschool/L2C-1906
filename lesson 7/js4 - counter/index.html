@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #myBox {
+            width: 200px;
+            height: 200px;
+
+            background-color: red;
+        }
+        
+        #myButton {
+            background-color: azure;
+            border: solid 1px blue;
+            border-radius: 15px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="myBox">
+
+    </div>
+    
+    <button id="addButton">ADD SOMETHING!</button>
+    <button id="subButton">SUBTRACT SOMETHING!</button>
+    
+    
+    
+    <script>
+        
+      
+        var myBox = document.getElementById("myBox");
+        var addButton = document.getElementById("addButton");
+        var subButton = document.getElementById("subButton");
+        var counter = 0;
+        
+        
+        
+        addButton.addEventListener("click", function() {
+            
+            counter++;
+            
+            myBox.innerHTML = counter;
+            
+        });
+        
+        subButton.addEventListener("click", function() {
+            
+            counter--;
+            
+            myBox.innerHTML = counter;
+            
+        });
+        
+        
+        // HOMEWORK
+        
+        // 1 - modify the code so that the number never becomes less than zero
+        
+        // 2 - create a new project with a square and 1 button
+        //     cycle through 3 different colors R -> G -> B -> R -> G ...
+        
+        // 3 - play around with what you learned and do something fun!
+    </script>
+
+</body></html>

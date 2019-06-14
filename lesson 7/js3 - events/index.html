@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #myBox {
+            width: 200px;
+            height: 200px;
+
+            background-color: red;
+        }
+        
+        #myButton {
+            background-color: azure;
+            border: solid 1px blue;
+            border-radius: 15px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="myBox">
+
+    </div>
+    
+    <button id="redButton">GO RED!</button>
+    <button id="greenButton">GO GREEN!</button>
+    <button id="switchButton">GO SWITCH!</button>
+    
+    
+    
+    <script>
+        
+      
+        
+        var redButton = document.getElementById("redButton");
+        var greenButton = document.getElementById("greenButton");
+        var switchButton = document.getElementById("switchButton");
+        
+        
+        redButton.addEventListener("click", function() {
+            
+            var myBox = document.getElementById("myBox");
+            
+            myBox.style.backgroundColor = "red";
+            
+        });
+        
+        greenButton.addEventListener("click", function() {
+            
+            var myBox = document.getElementById("myBox");
+            
+            myBox.style.backgroundColor = "green";
+            
+        });
+        
+        switchButton.addEventListener("click", function() {
+            
+            var myBox = document.getElementById("myBox");
+            
+            if (myBox.style.backgroundColor == "red") {
+                myBox.style.backgroundColor = "green";
+            } else {
+                myBox.style.backgroundColor = "red";
+            }
+            
+        });
+    
+    </script>
+
+</body></html>
