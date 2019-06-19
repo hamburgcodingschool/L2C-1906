@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+        <style>
+            #myBox {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+            }
+            
+        </style>
+	</head>
+	<body>
+
+        <select id="myOptions">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Some weird color</option>
+        </select>
+        
+        <div id="myBox">
+        
+        </div>
+        
+        <script>
+            
+            var myBox = document.getElementById("myBox");
+            var myOptions = document.getElementById("myOptions");
+            
+            myOptions.addEventListener("change", function() {
+                
+                myBox.style.backgroundColor = myOptions.value;
+                
+            });
+            
+        
+        </script>
+	</body>
+</html>

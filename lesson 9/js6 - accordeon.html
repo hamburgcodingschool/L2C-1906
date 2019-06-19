@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        .accHeader {
+            width: 200px;
+            border: solid 2px black;
+        }
+
+        .accBody {
+            width: 200px;
+            border: solid 2px black;
+            display: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="accHeader">
+        Some title 1</div>
+    <div class="accBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus at nisi nec efficitur. Curabitur id malesuada lectus, ac bibendum sapien. Vivamus accumsan tristique ligula eu tempor. Nunc efficitur nibh purus, ac rutrum nisi vestibulum nec. Fusce mauris lorem, tempor eu libero molestie, rhoncus interdum nisi. Nunc magna orci, interdum ac sagittis blandit, varius in nibh. Fusce a vestibulum eros. Quisque sollicitudin consectetur neque nec pharetra. In auctor mollis ultricies. Sed tincidunt rhoncus sodales. Nunc euismod leo non augue scelerisque ullamcorper.</div>
+    <div class="accHeader">Some title 2</div>
+    <div class="accBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus at nisi nec efficitur. Curabitur id malesuada lectus, ac bibendum sapien. Vivamus accumsan tristique ligula eu tempor. Nunc efficitur nibh purus, ac rutrum nisi vestibulum nec. Fusce mauris lorem, tempor eu libero molestie, rhoncus interdum nisi. Nunc magna orci, interdum ac sagittis blandit, varius in nibh. Fusce a vestibulum eros. Quisque sollicitudin consectetur neque nec pharetra. In auctor mollis ultricies. Sed tincidunt rhoncus sodales. Nunc euismod leo non augue scelerisque ullamcorper.</div>
+    <div class="accHeader">Some title 3</div>
+    <div class="accBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus at nisi nec efficitur. Curabitur id malesuada lectus, ac bibendum sapien. Vivamus accumsan tristique ligula eu tempor. Nunc efficitur nibh purus, ac rutrum nisi vestibulum nec. Fusce mauris lorem, tempor eu libero molestie, rhoncus interdum nisi. Nunc magna orci, interdum ac sagittis blandit, varius in nibh. Fusce a vestibulum eros. Quisque sollicitudin consectetur neque nec pharetra. In auctor mollis ultricies. Sed tincidunt rhoncus sodales. Nunc euismod leo non augue scelerisque ullamcorper.</div>
+    <div class="accHeader">Some title 4</div>
+    <div class="accBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus at nisi nec efficitur. Curabitur id malesuada lectus, ac bibendum sapien. Vivamus accumsan tristique ligula eu tempor. Nunc efficitur nibh purus, ac rutrum nisi vestibulum nec. Fusce mauris lorem, tempor eu libero molestie, rhoncus interdum nisi. Nunc magna orci, interdum ac sagittis blandit, varius in nibh. Fusce a vestibulum eros. Quisque sollicitudin consectetur neque nec pharetra. In auctor mollis ultricies. Sed tincidunt rhoncus sodales. Nunc euismod leo non augue scelerisque ullamcorper.</div>
+
+
+    <script>
+        //        var open = undefined;
+        //        
+        //        $(".accHeader").click(function() {
+        //            
+        //            if ($(this).next().css("display") != "none") {
+        //                return;
+        //            }
+        //            
+        //            if (open != undefined) {
+        //                open.slideUp();    
+        //            }
+        //            
+        //            
+        //            open = $(this).next();
+        //            
+        //            
+        //            $(this).next().slideToggle();
+        //        });
+
+
+        $(".accHeader").click(function() {
+
+            if ($(this).next().css("display") == "none") {
+                $(".accBody").slideUp();
+                $(this).next().slideDown();
+            } else {
+                alert("What are you doing? it s already open...");
+            }
+
+        });
+    </script>
+
+</body></html>

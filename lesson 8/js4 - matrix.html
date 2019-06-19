@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>        
+        <script>
+        
+            var myContent = [
+                [0, 1, 2, 3],
+                [4, 5, 6, 7],
+                [8, 9, 10, 11],
+                [12, 13, 14, 15]
+            ];
+        
+                    
+//            for (var i = 0; i < myContent.length; i++) {
+//                
+//                for (var j = 0; j < myContent[i].length; j++) {
+//                    if (j > 0) {
+//                        document.write(", ");        
+//                    }
+//                    document.write(myContent[i][j]);
+//                }
+//                
+//                document.write("<br>");
+//            }
+            
+            
+            document.write('<table width="100" border="4" cellspacing="2" cellpadding="15">');
+            for (var i = 0; i < myContent.length; i++) {
+                
+                document.write("<tr>");
+                
+                for (var j = 0; j < myContent[i].length; j++) {
+                    document.write("<td>");
+                    document.write(myContent[i][j]);
+                    document.write("</td>");
+                }
+                
+                document.write("</tr>");
+            }
+            document.write('</table>');
+        </script>
+       
+	</body>
+</html>

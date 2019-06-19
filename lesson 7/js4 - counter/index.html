@@ -51,8 +51,9 @@
         
         subButton.addEventListener("click", function() {
             
-            counter--;
-            
+            if (counter > 0) {
+                counter--;    
+            }
             myBox.innerHTML = counter;
             
         });

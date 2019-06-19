@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #myBox {
+            width: 200px;
+            height: 200px;
+
+            background-color: red;
+            background-image: url(images/frog.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        #myButton {
+            background-color: azure;
+            border: solid 1px blue;
+            border-radius: 15px;
+            padding: 5px;
+        }
+        
+        #img1 {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img id="img1" src="images/frog.jpg">
+    <div id="myBox"></div>
+    
+    
+    <button id="prevButton">GO BACK!</button>
+    <button id="nextButton">GO FW!</button>
+    
+    
+    <script>
+        
+        var prevButton = document.getElementById("prevButton");
+        var nextButton = document.getElementById("nextButton");
+        var img1 = document.getElementById("img1");
+        var myBox = document.getElementById("myBox");
+        
+        var counter = 0;
+        
+        var images= [
+            "images/frog.jpg",
+            "images/frog2.jpg",
+            "images/frog3.jpg",
+            "https://ichef.bbci.co.uk/news/624/cpsprodpb/3DA1/production/_96777751_c0220207-red-eyed_treefrog-spl.jpg",
+            "https://i.pinimg.com/originals/7d/a4/1d/7da41db40ef79590304cfe2c86c8d710.jpg"
+        ];
+        
+        nextButton.addEventListener("click", function() {
+            
+            counter ++;
+            if (counter >= images.length) {
+                counter = 0;
+            }
+            
+            img1.src = images[counter];
+            myBox.style.backgroundImage ="url(" + images[counter] + ")";
+        });
+        
+        prevButton.addEventListener("click", function() {
+            
+            counter --;
+            if (counter < 0) {
+                counter = images.length - 1;
+            }
+            
+            img1.src = images[counter];
+            myBox.style.backgroundImage = "url(" + images[counter] + ")";
+        });
+    
+    </script>
+
+</body></html>

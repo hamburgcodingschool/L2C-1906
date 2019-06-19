@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+
+        <h1 id="theTitle">Yo I am also a COOL Website! (maybe)</h1>
+        
+        <script>
+        
+        
+            var a = 2;
+            var b = 5;
+            
+            var sum = a + b;
+            
+            document.write(sum);
+        
+            var theTitle = document.getElementById("theTitle");
+            theTitle.addEventListener("click", function() {
+                
+//               DOCUMENT WRITE WILL EMPTY THE BODY AND START ANEW IF THE PAGE AS FINISHED LOADING
+//                document.write("YO YO YO");
+                
+                var emptySpace = document.getElementById("emptySpace");
+                emptySpace.innerHTML += "YOYOYOYO";
+                
+            });
+        
+        </script>
+        
+        <div id="emptySpace"></div>
+        
+        <h2>THE END!</h2>
+        
+	</body>
+</html>

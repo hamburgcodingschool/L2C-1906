@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        
+        #galleryWrapper {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            
+            position: relative;
+        }
+        
+        #galleryWrapper > div {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        #galleryImageBack {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        #galleryImageFront {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+    <div id="galleryWrapper">
+        <div id="galleryImageBack">
+        </div>
+        <div id="galleryImageFront">
+        </div>
+    </div>
+    
+    <button id="buttonNext">NEXT</button>
+    
+    <script>
+        
+        var images= [
+            "images/frog.jpg",
+            "images/frog2.jpg",
+            "images/frog3.jpg",
+            "https://ichef.bbci.co.uk/news/624/cpsprodpb/3DA1/production/_96777751_c0220207-red-eyed_treefrog-spl.jpg",
+            "https://i.pinimg.com/originals/7d/a4/1d/7da41db40ef79590304cfe2c86c8d710.jpg"
+        ];
+        
+        $("#galleryImageFront").css("background-image", "url(" + images[0] + ")");
+        $("#galleryImageBack").css("background-image", "url(" + images[1] + ")");
+        
+        $("#buttonNext").click(function () {
+            
+            $("#galleryImageFront").fadeOut(2000, function() {
+                
+                $("#galleryImageFront").css("background-image", "url(" + images[1] + ")");
+                $("#galleryImageBack").css("background-image", "url(" + images[2] + ")");
+                $("#galleryImageFront").show();
+            
+            });
+            
+        });
+        
+    </script>
+
+</body></html>

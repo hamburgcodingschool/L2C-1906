@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #myBox {
+            width: 200px;
+            height: 200px;
+
+            background-color: red;
+        }
+        
+        #myButton {
+            background-color: azure;
+            border: solid 1px blue;
+            border-radius: 15px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="myBox">0</div>
+    
+    
+    <button id="prevButton">GO BACK!</button>
+    <button id="nextButton">GO FW!</button>
+    
+    
+    <script>
+        
+        var prevButton = document.getElementById("prevButton");
+        var nextButton = document.getElementById("nextButton");
+        
+        
+        var counter = 0;
+        
+        var colors= [
+            "red",
+            "green",
+            "blue",
+            "yellow"
+        ];
+        
+        nextButton.addEventListener("click", function() {
+            
+            var myBox = document.getElementById("myBox");
+            
+            counter ++;
+            if (counter >= colors.length) {
+                counter = 0;
+            }
+            
+            myBox.innerHTML = counter;
+            myBox.style.backgroundColor = colors[counter];
+            
+        });
+        
+        prevButton.addEventListener("click", function() {
+            
+            var myBox = document.getElementById("myBox");
+            
+            counter --;
+            if (counter < 0) {
+                counter = colors.length - 1;
+            }
+            
+            myBox.innerHTML = counter;
+            myBox.style.backgroundColor = colors[counter];
+            
+        });
+    
+    </script>
+
+</body></html>

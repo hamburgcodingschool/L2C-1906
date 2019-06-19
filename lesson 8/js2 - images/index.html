@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+        <style>
+            #img1 {
+                width: 200px;
+            }
+        </style>
+	</head>
+	<body>
+
+        <img id="img1" src="images/frog.jpg">
+        <button id="changeFrogButton">change frog</button>
+        
+        <script>
+            
+            var changeFrogButton = document.getElementById("changeFrogButton");
+            changeFrogButton.addEventListener("click", function() {
+                
+                var img1 = document.getElementById("img1");
+                img1.src = "frog2.jpg";
+                
+            });
+        
+            
+            
+        
+        </script>
+        
+	</body>
+</html>
