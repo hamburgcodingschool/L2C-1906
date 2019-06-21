@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="hangman.js"></script>
+</head>
+
+<body>
+    <img id="livesImage" src="" width="50">
+    <div id="livesBox"></div>
+    <div id="statusBox"></div>
+    <div id="phraseBox"></div>
+    <div id="buttonWrapper">
+
+    </div>
+
+    <button id="newGameButton">NEW GAME!</button>
+
+    <script>
+        // setup game variables
+        var images = [
+            "imgs/forca_0.png",
+            "imgs/forca_1.png",
+            "imgs/forca_2.png",
+            "imgs/forca_3.png",
+            "imgs/forca_4.png",
+            "imgs/forca_5.png",
+            "imgs/forca_6.png"
+        ];
+        
+        var phrases = [
+            "Gotham City",
+            "Metropolis",
+            "Star City",
+            "Coast City",
+            "Themescira",
+            "Hamburg",
+            "Porto"
+        ];
+        var live;
+        var secretPhrase;
+        var userPhrase;
+        
+        
+        function updateDisplay() {
+            $("#phraseBox").html(userPhrase);
+            $("#livesBox").html(lives);
+            $("#livesImage").attr("src", images[lives]);
+        }
+        
+        function startGame() {
+            lives = 6;
+            
+            var randomPos = myRandom(0, phrases.length - 1);
+            
+            secretPhrase = phrases[randomPos];
+            userPhrase = dashItUp(secretPhrase); // ------ ----
+            $("#statusBox").html("");
+            
+            
+            updateDisplay();
+        }
+
+        // PREPARE BUTTONS
+        var abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        for (var i = 0; i < abc.length; i++) {
+            var letter = abc[i];
+
+            var newButton = "<button>" + letter + "</button>";
+
+            $("#buttonWrapper").append(newButton);
+        }
+
+
+        // LISTEN TO BUTTON CLICK
+        $("#buttonWrapper button").click(function() {
+            // check if won or lost
+            if (secretPhrase == userPhrase || lives <= 0) {
+                $("#statusBox").html("game is already over...");
+                return;
+            }
+            
+            var letter = $(this).html();
+
+            var updatedPhrase = checkPhrase(secretPhrase, userPhrase, letter);
+            if (userPhrase == updatedPhrase) {
+                lives--;
+            } else {
+                userPhrase = updatedPhrase;
+            }
+
+            // update display
+            updateDisplay();
+
+
+            // check if won or lost
+            if (secretPhrase == userPhrase) {
+                $("#statusBox").html("DUDE YOU ARE AWESOME!!!!");
+            }
+            if (lives <= 0) {
+                $("#statusBox").html("seriously?");
+            }
+        });
+        
+        $("#newGameButton").click(function() {
+            startGame();
+        });
+
+        // PREPARE GAME
+
+        startGame();
+        
+    </script>
+</body></html>

@@ -53,6 +53,7 @@
     
     <script>
         
+        // define the array that holds all the images the user will see (1 at a time)
         var images= [
             "images/frog.jpg",
             "images/frog2.jpg",
@@ -61,15 +62,27 @@
             "https://i.pinimg.com/originals/7d/a4/1d/7da41db40ef79590304cfe2c86c8d710.jpg"
         ];
         
-        $("#galleryImageFront").css("background-image", "url(" + images[0] + ")");
-        $("#galleryImageBack").css("background-image", "url(" + images[1] + ")");
+        // sets the current position in the array
+        var currentImage = 0;
         
+        // as soon as the page starts, we set the front image ( the back image is not visible yet)
+        $("#galleryImageFront").css("background-image", "url(" + images[currentImage] + ")");
+        
+        // what happens when the user clicks the button
         $("#buttonNext").click(function () {
             
-            $("#galleryImageFront").fadeOut(2000, function() {
+            // goto next image, if we reach the end of the array go back to 0
+            currentImage++;
+            if (currentImage >= images.length) {
+                currentImage = 0;
+            }
+            
+            $("#galleryImageBack").css("background-image", "url(" + images[currentImage] + ")");
+            
+            // image fades in 2 seconds, calls inner function when fade ends
+            $("#galleryImageFront").fadeOut(400, function() {
                 
-                $("#galleryImageFront").css("background-image", "url(" + images[1] + ")");
-                $("#galleryImageBack").css("background-image", "url(" + images[2] + ")");
+                $("#galleryImageFront").css("background-image", "url(" + images[currentImage] + ")");
                 $("#galleryImageFront").show();
             
             });
